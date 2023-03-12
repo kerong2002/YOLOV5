@@ -32,11 +32,22 @@ Sun Mar 12 08:47:27 2023
 |=======================================================================================|
 |  No running processes found                                                           |
 +---------------------------------------------------------------------------------------+
+
+## 訓練問題&解決辦法
+1. 由於NVIDIA 官方的一些軟件問題，導致了PyTorch裡面一些CUDA代碼有些問題，就是fp16（float16）數據類型在卷積等一些運算的時候會出現nan值。導致了訓練時候出現了nan值，故而在validation時就會檢測不到導致了上述情況。
+2. YOLOV5裡面檢測沒有nan值、不識別問題，就只有訓練的時候有問題。
+3. 在train.py搜索amp把check_amp註釋掉直接把amp賦值為False
+4. 這樣做之後在運行train.py發現訓練時就不會有nan值了。如果還有，考慮下其他方法了。然後，你就會發現validation時會出現P/R/map全部為0。然後你就繼續在train.py裡面搜索half關鍵字，把所有有.half()變為.float()
+5. 要解決這個問題，還需要在val.py裡面將所有的half改為False，同時im.half() if half else im.float() 改為 im.float()。
+
+
 ```
 ## 訓練資料
 - 透過[Make Sense](https://www.makesense.ai/) 畫取標籤
 - 訓練資料為my_data內容
 - 訓練的標籤數量為4
+```
+
 ```
 names:
   0: mask

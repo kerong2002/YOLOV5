@@ -1,5 +1,9 @@
 # YOLOV5
 參考來源：[YOLOV5](https://github.com/ultralytics/yolov5)
+
+## 測試
+![img](https://github.com/kerong2002/YOLOV5/blob/main/kerong.png)
+
 ## 安裝步驟
 1. 開啟Anaconda Prompt輸入```conda create -n yolov5 python=3.10```
 2. 激活虛擬環境```conda activate yolov5```

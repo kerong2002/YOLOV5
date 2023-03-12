@@ -48,8 +48,6 @@ Sun Mar 12 08:47:27 2023
 - 訓練資料為my_data內容
 - 訓練的標籤數量為4
 ```
-
-```
 names:
   0: mask
   1: parrot

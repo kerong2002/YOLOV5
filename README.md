@@ -7,6 +7,7 @@
 4. 到yolov5 github官網 https://github.com/ultralytics/yolov5 Download ZIP
 5. 可以從下載的檔案抓出requirement.txt或者輸入```git clone https://github.com/ultralytics/yolov5```
 6. 安裝yolov5 所需要的函示庫 ```pip install -U -r yolov5/requirements.txt```
+7. 透過[test_GPU.py](https://github.com/kerong2002/YOLOV5/blob/main/test_GPU.py)檢測GPU
 
 ## 訓練環境
 ```

@@ -8,3 +8,5 @@ YOLOV5
 5. 可以從下載的檔案抓出requirement.txt或者輸入```git clone https://github.com/ultralytics/yolov5```
 6. 安裝yolov5 所需要的函示庫 ```pip install -U -r yolov5/requirements.txt```
 
+## 訓練成品圖
+![img](https://github.com/kerong2002/YOLOV5/blob/main/runs/train/exp6/val_batch0_labels.jpg)

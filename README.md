@@ -8,6 +8,30 @@
 5. 可以從下載的檔案抓出requirement.txt或者輸入```git clone https://github.com/ultralytics/yolov5```
 6. 安裝yolov5 所需要的函示庫 ```pip install -U -r yolov5/requirements.txt```
 
+## 訓練環境
+```
+(yolov5) C:\Users\User>nvidia-smi
+Sun Mar 12 08:47:27 2023
++---------------------------------------------------------------------------------------+
+| NVIDIA-SMI 531.14                 Driver Version: 531.14       CUDA Version: 12.1     |
+|-----------------------------------------+----------------------+----------------------+
+| GPU  Name                      TCC/WDDM | Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp  Perf            Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
+|                                         |                      |               MIG M. |
+|=========================================+======================+======================|
+|   0  NVIDIA GeForce GTX 1650 w...  WDDM | 00000000:01:00.0 Off |                  N/A |
+| N/A   46C    P0               11W /  N/A|      0MiB /  4096MiB |      0%      Default |
+|                                         |                      |                  N/A |
++-----------------------------------------+----------------------+----------------------+
+
++---------------------------------------------------------------------------------------+
+| Processes:                                                                            |
+|  GPU   GI   CI        PID   Type   Process name                            GPU Memory |
+|        ID   ID                                                             Usage      |
+|=======================================================================================|
+|  No running processes found                                                           |
++---------------------------------------------------------------------------------------+
+```
 ## 訓練資料
 - 透過[Make Sense](https://www.makesense.ai/) 畫取標籤
 - 訓練資料為my_data內容
